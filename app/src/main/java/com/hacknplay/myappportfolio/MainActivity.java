@@ -1,9 +1,11 @@
 package com.hacknplay.myappportfolio;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -35,4 +37,33 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void sendToast(View view) {
+        String toastText = new String();
+        switch (view.getId()) {
+            case R.id.button:
+                toastText = getResources().getString(R.string.media_streamer);
+                break;
+            case R.id.button2:
+                toastText = getResources().getString(R.string.super_duo1);
+                break;
+            case R.id.button3:
+                toastText = getResources().getString(R.string.super_duo2);
+                break;
+            case R.id.button4:
+                toastText = getResources().getString(R.string.ant_terminator);
+                break;
+            case R.id.button5:
+                toastText = getResources().getString(R.string.materialize);
+                break;
+            case R.id.button6:
+                toastText = getResources().getString(R.string.my_own_app);
+                break;
+            default:
+                toastText = "Nothing special";
+        }
+
+        Toast.makeText(this, "This button will launch " + toastText, Toast.LENGTH_SHORT).show();
+    }
+
 }
