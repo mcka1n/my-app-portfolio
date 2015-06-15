@@ -54,7 +54,7 @@ public class MainActivity extends ActionBarActivity {
                 toastText = getResources().getString(R.string.ant_terminator);
                 break;
             case R.id.button5:
-                toastText = getResources().getString(R.string.materialize);
+                toastText = getResources().getString(R.string.xyz_reader);
                 break;
             case R.id.button6:
                 toastText = getResources().getString(R.string.my_own_app);
